@@ -2,6 +2,8 @@
 
 API para o app NadaGostoso, desenvolvido para o trabalho da disciplina de Tópicos Especiais de Informática na FATEC de Itu, SP.
 
+Disponível em: https://nadagostoso-api.onrender.com/
+
 <hr />
 
 ## Como executar o projeto utilizando Docker
