@@ -27,6 +27,9 @@ const schema = new mongoose.Schema({
     type: String,
     required: [true, 'Recipe must have step-by-step instructions!']
   },
+  image_base64: {
+    type: String
+  },
   author: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',

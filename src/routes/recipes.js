@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/', userExtractor, async (req, res) => {
-  const { name, ingredients, instructions } = req.body
+  const { name, ingredients, image_base64, instructions } = req.body
 
   const user = await User.findById(req.user.id)
 
@@ -20,6 +20,7 @@ router.post('/', userExtractor, async (req, res) => {
     name,
     ingredients,
     instructions,
+    image_base64,
     author: user._id
   })
 
@@ -42,13 +43,14 @@ router.delete('/:id', userExtractor, async (req, res) => {
 })
 
 router.put('/:id', userExtractor, async (req, res) => {
-  const { name, ingredients, instructions } = req.body
+  const { name, ingredients, image_base64, instructions } = req.body
   const user = req.user
 
   const recipe = {
     name,
     ingredients,
-    instructions
+    instructions,
+    image_base64
   }
 
   const recipeToBeUpdated = await Recipe.findById(req.params.id)
