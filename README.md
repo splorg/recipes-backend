@@ -2,6 +2,11 @@
 
 API para o app NadaGostoso, desenvolvido para o trabalho da disciplina de Tópicos Especiais de Informática na FATEC de Itu, SP.
 
+Desenvolvida com Express.js e Mongoose.
+## Funcionalidades:
+- [x] Autenticação de usuário via JWT
+- [x] CRUD de receitas
+
 Disponível em: https://nadagostoso-api.onrender.com/
 
 <hr />
