@@ -55,7 +55,7 @@ router.put('/:id', userExtractor, async (req, res) => {
 
   const recipeToBeUpdated = await Recipe.findById(req.params.id)
   
-  if (recipeToBeUpdated.author !== user.id) return res.status(401).json({ error: 'Unauthorized access to this recipe.' })
+  if (recipeToBeUpdated.author.toString() !== user.id) return res.status(401).json({ error: 'Unauthorized access to this recipe.' })
 
   const updatedRecipe = await Recipe.findByIdAndUpdate(req.params.id, recipe, { new: true, runValidators: true })
 
